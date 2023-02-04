@@ -22,7 +22,7 @@ class Crud extends Migration
             $table->string('nip');
             $table->string('nwnp');
             $table->string('alamat');
-            $table->text('photos');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class Crud extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('karyawan');
+        Schema::dropIfExists('karyawans');
     }
 }
