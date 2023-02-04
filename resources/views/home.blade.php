@@ -78,9 +78,17 @@
                                                 <td> <a href="{{ url('crud/detail/' . $data->id) }} "
                                                         class="btn btn-primary btn-sm">
                                                         <i class="far fa-id-badge"></i></a>
-                                                    <a href="{{ url('crud/view/' . $data->id) }} "
-                                                        class="btn btn-danger btn-sm">
-                                                        <i class="fas fa-trash"></i></a>
+
+                                                    <form action="{{ url('crud/destroys/' . $data->id) }}" class="d-inline"
+                                                        method="post">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <input type="hidden" value="{{ $data->image }}">
+                                                        <button class="btn btn-danger btn-sm"
+                                                            onclick="return confirm('Anda Yakin?')">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Karyawan;
+use Illuminate\Support\Facades\Storage;
 
 class CrudController extends Controller
 {
@@ -90,11 +91,23 @@ class CrudController extends Controller
             'image' => 'required',
             ]);
         if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
             $validatedData['image'] = $request->file('image')->store('photos');
         }
         Karyawan::where('id', $id)->update($validatedData);
 
 
         return redirect('/crud/detail/'.$id);
+    }
+    public function destroy(Request $request, $id)
+    {
+        if ($request->image) {
+            Storage::delete($request->image);
+        }
+        Karyawan::destroy($id);
+
+        return redirect('/home');
     }
 }

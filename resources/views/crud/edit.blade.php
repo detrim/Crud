@@ -222,6 +222,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="oldImage" value="{{ $karyawan->image }}">
 
                                             <img src="{{ asset('storage/' . $karyawan->image) }}"
                                                 class="img-thumbnail img-preview ">

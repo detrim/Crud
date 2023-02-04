@@ -25,3 +25,4 @@ Route::patch('crudedit/{id}', [CrudController::class, 'editproses']);
 Route::patch('ps/{id}', [CrudController::class, 'ps']);
 Route::get('crud/detail/{id}', [CrudController::class, 'detail']);
 Route::get('crud/edit/{id}', [CrudController::class, 'edit']);
+Route::delete('crud/destroys/{id}', [CrudController::class, 'destroy']);
