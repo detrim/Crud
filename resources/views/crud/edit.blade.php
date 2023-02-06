@@ -128,7 +128,7 @@
                                                                     <div class="form-group">
                                                                         <label>Nomor Telp</label>
                                                                         <input type="text" name="no_telp"
-                                                                            class="form-control form-control-border"
+                                                                            class="form-control form-control-border hp"
                                                                             placeholder="Nomor Telp"
                                                                             value="{{ $karyawan->no_telp }}">
                                                                     </div>
@@ -140,7 +140,7 @@
                                                                     <div class="form-group">
                                                                         <label>NIP</label>
                                                                         <input type="text" name="nip"
-                                                                            class="form-control form-control-border"
+                                                                            class="form-control form-control-border nip"
                                                                             placeholder="Nomor Induk Pegawai"
                                                                             value="{{ $karyawan->nip }}">
                                                                     </div>
@@ -150,7 +150,7 @@
                                                                     <div class="form-group">
                                                                         <label>NWNP</label>
                                                                         <input type="text" name="nwnp"
-                                                                            class="form-control form-control-border"
+                                                                            class="form-control form-control-border nwnp"
                                                                             placeholder="NWNP"
                                                                             value="{{ $karyawan->nwnp }}">
                                                                     </div>
