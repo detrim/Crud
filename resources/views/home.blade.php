@@ -83,7 +83,7 @@
                                                         method="post">
                                                         @method('delete')
                                                         @csrf
-                                                        <input type="hidden" value="{{ $data->image }}">
+                                                        <input type="hidden" name="image" value="{{ $data->image }}">
                                                         <button class="btn btn-danger btn-sm"
                                                             onclick="return confirm('Anda Yakin?')">
                                                             <i class="fa fa-trash"></i>

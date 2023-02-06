@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Karyawan;
+use App\Models\Karyawan as karyawan;
 use Illuminate\Support\Facades\Storage;
 
 class CrudController extends Controller
@@ -11,7 +11,7 @@ class CrudController extends Controller
     public function data()
     {
         return view('home', [
-            'datakaryawan' => Karyawan::orderBY('id', 'asc')->get(),
+            'datakaryawan' => Karyawan::orderBY('id', 'desc')->get(),
         ]);
     }
     public function add()

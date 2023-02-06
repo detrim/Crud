@@ -121,7 +121,8 @@
                                                                         <label>Alamat Email</label>
                                                                         <input type="email" name="email"
                                                                             class="form-control @error('email') is-invalid @enderror"
-                                                                            placeholder="Alamat email">
+                                                                            placeholder="Alamat email"
+                                                                            value="{{ old('email') }}">
                                                                         @error('email')
                                                                             <small
                                                                                 class="text-danger ">{{ $message }}</small>
@@ -147,7 +148,8 @@
                                                                         <label>Nomor Telp</label>
                                                                         <input type="text" name="no_telp"
                                                                             class="form-control hp @error('no_telp') is-invalid @enderror"
-                                                                            placeholder="Nomor Telp">
+                                                                            placeholder="Nomor Telp"
+                                                                            value="{{ old('no_telp') }}">
                                                                         @error('no_telp')
                                                                             <small
                                                                                 class="text-danger ">{{ $message }}</small>
@@ -162,7 +164,8 @@
                                                                         <label>NIP</label>
                                                                         <input type="text" name="nip"
                                                                             class="form-control nip @error('nip') is-invalid @enderror"
-                                                                            placeholder="Nomor Induk Pegawai">
+                                                                            placeholder="Nomor Induk Pegawai"
+                                                                            value="{{ old('nip') }}">
                                                                         @error('nip')
                                                                             <small
                                                                                 class="text-danger ">{{ $message }}</small>
@@ -175,7 +178,8 @@
                                                                         <label>NWNP</label>
                                                                         <input type="text" name="nwnp"
                                                                             class="form-control nwnp @error('nwnp') is-invalid @enderror"
-                                                                            placeholder="NWNP">
+                                                                            placeholder="NWNP"
+                                                                            value="{{ old('nwnp') }}">
                                                                         @error('nwnp')
                                                                             <small
                                                                                 class="text-danger ">{{ $message }}</small>
@@ -188,7 +192,7 @@
                                                                 <label>Alamat KTP</label>
                                                                 <input type="text" name="alamat"
                                                                     class="form-control @error('alamat') is-invalid @enderror"
-                                                                    placeholder="Alamat KTP">
+                                                                    placeholder="Alamat KTP" value="{{ old('alamat') }}">
                                                                 @error('alamat')
                                                                     <small class="text-danger ">{{ $message }}</small>
                                                                 @enderror
